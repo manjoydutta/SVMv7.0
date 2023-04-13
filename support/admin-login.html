@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="admin.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <nav class="navbar">
+        <div class="navbar-container container">
+            
+            
+            <h1 class="logo">ADMIN LOGIN</h1>
+        </div>
+    </nav>
+</div>
+    
+    <!-- <div class="wrapper"> -->
+
+        <div class="center-box-3" id="admin-div">
+            <div id="panel">
+                <svg viewBox="0 0 16 16" class="bi bi-person-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
+                  <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                  <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
+                </svg>
+            </div>
+            <h1>Admin Login</h1>
+            <i class="fa fa-user"></i>&nbsp;<input type="text" class="text-field" id="admin-id" minlength="6" maxlength="7" name="admin-id" placeholder="Admin ID*" required/><br><br>
+            <i class="fa fa-key"></i><input type="password" class="text-field" id="admin-password" minlength="8" name="admin-password" placeholder="Password*" required/><br>
+            <button class="btn-style" id="admin-login-btn">Login</button>
+            
+        </div>
+        
+
+    <!-- </div> -->
+</div>
+<!-- <script>
+    var hamburger = document.querySelector(".hamburger");
+   hamburger.addEventListener("click", function(){
+       document.querySelector("body").classList.toggle("active");
+   })
+    </script> -->
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+    <script type="module" src="sc1.js"></script>
+</body>
+</html>

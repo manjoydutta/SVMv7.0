@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="admin.css">
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+	    <title>Document</title>
+	</head>
+
+	<body>
+
+		<!-- for header part -->
+		<header>
+
+			<div class="logosec">
+				<div class="logo">ADMIN</div>
+				<ion-icon name="menu"  size="large"	class="icn menuicn"	id="menuicn" alt="menu-icon"></ion-icon>
+			</div>
+
+			<div class="searchbar">
+				<input type="text"
+					placeholder="Search">
+				<div class="searchbtn">
+					<ion-icon name="search-sharp"  size="large" style="color: #fff;"></ion-icon>
+					
+				</div>
+			</div>
+
+			<div class="message">
+				<div class="circle"></div>
+				<img src= "https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/8.png"
+					class="icn" alt="">
+				<div class="dp">
+				<img src= "https://media.geeksforgeeks.org/wp-content/uploads/20221210180014/profile-removebg-preview.png"
+						class="dpicn"
+						alt="dp">
+				</div>
+			</div>
+
+		</header>
+
+		<div class="main-container">
+
+
+			<div class="navcontainer">
+				<nav class="nav">
+					<div class="nav-upper-options">
+						<ul>
+							<li class="nav-option active-link">
+								<a href="#dashboard"><ion-icon name="home-outline" size="large"></ion-icon></a>
+								<a href="#dashboard"><h3>Dashboard</h3></a>
+							</li>
+
+							<li class="nav-option">
+								<a href="#report"><ion-icon name="bar-chart-outline" size="large"></ion-icon></a>
+								<a href="#report"><h3>Report</h3></a>
+							</li>
+
+							<li class="nav-option">
+								<a href="#controls"><ion-icon name="settings-outline" size="large"></ion-icon></a>
+								<a href="#controls"><h3>Controls</h3></a>
+							</li>
+
+							<li class="nav-option ">
+								<a href="#profile"><ion-icon name="person-outline" size="large"></ion-icon></a>
+								<a href="#profile"><h3>Profile</h3></a>
+							</li>
+
+							<li class="nav-option logout">
+								<a href="admin-login.html"><ion-icon name="log-out-outline" size="large" style="transform: rotateY(180deg);"></ion-icon></a>
+								<a href="admin-login.html"><h3>Logout</h3></a>
+							</li>
+						</ul>
+
+					</div>
+				</nav>
+			</div>
+
+		
+			<main class="main">
+
+	            <section class="dashboard" id="dashboard">
+				
+					<div class="searchbar2">
+			    		<input type="text" name="" id="" placeholder="Search">
+			    		<div class="searchbtn">
+			    		<img src= "https://media.geeksforgeeks.org/wp-content/uploads/20221210180758/Untitled-design-(28).png" class="icn srchicn" alt="search-button">
+			    		</div>
+			    	</div>
+
+			    	<div class="box-container">
+
+	                    <div class="box box4">
+			    			<div class="text">
+			    				<h2 class="topic-heading"><span id="enrolled-voters"></span></h2>
+			    				<h2 class="topic">Enrolled Voters</h2>
+			    			</div>
+							<!-- <ion-icon name="create-sharp"  size="large" style="color: #fff;" class="icn srchicn" ></ion-icon> -->
+			    		</div>
+
+	                    <div class="box box2">
+			    			<div class="text">
+			    				<h2 class="topic-heading"><span id="votes_polled"></span></h2>
+			    				<h2 class="topic">Votes Polled</h2>
+			    			</div>
+							<!-- <ion-icon name="thumbs-up-sharp" size="large" style="color: #fff;"class="icn srchicn"></ion-icon> -->
+			    		</div>
+
+			    		<div class="box box1">
+			    			<div class="text">
+			    				<h2 class="topic-heading"><span id="percentage_turnout"></span>&nbsp;%</h2>
+			    				<h2 class="topic">Voter Turnout Percentage</h2>
+			    			</div>
+							<!-- <ion-icon name="analytics-sharp" size="large" style="color: #fff;"class="icn srchicn"></ion-icon> -->
+			    		</div>               
+			    	</div>
+
+			    	<div class="voting-container">
+			    		<div class="voting-header">
+			    			<h2 class="recent-Articles">Voting Overview</h2>
+			    			<button class="view">View All</button>
+			    		</div>
+
+			    		<div class="voting-body">
+			    			<div class="voting-topic-heading">
+			    				<h3 class="t-op">Candidate</h3>
+			    				<h3 class="t-op">Votes</h3>
+			    				<h3 class="t-op">Vote Percentage</h3>
+			    			</div>
+
+			    			<div class="items">
+			    				<div class="item1">
+			    					<h3 class="t-op-nextlvl">Trinamool Congress</h3>
+			    					<h3 class="t-op-nextlvl"><span id="tmc_count">-</span></h3>
+			    					<h3 class="t-op-nextlvl"><span id="tmc_per">-</span>&nbsp;%</h3>
+			    				</div>
+
+			    				<div class="item1">
+			    					<h3 class="t-op-nextlvl">Bharatiya Janata Party</h3>
+			    					<h3 class="t-op-nextlvl"><span id="bjp_count">-</span></h3>
+			    					<h3 class="t-op-nextlvl"><span id="bjp_per">-</span>&nbsp;%</h3>
+			    				</div>
+
+			    				<div class="item1">
+			    					<h3 class="t-op-nextlvl">Indian National Congress</h3>
+			    					<h3 class="t-op-nextlvl"><span id="inc_count">-</span></h3>
+			    					<h3 class="t-op-nextlvl"><span id="inc_per">-</span>&nbsp;%</h3>
+			    				</div>
+			    			</div>
+
+			    		</div>
+
+			    	</div>
+
+	            </section> 
+
+
+				<!-- Entering the next section -->
+
+				<section class="report" id="report">
+					<h1>Report</h1>
+					<canvas id="pieChart"></canvas>
+
+
+				
+				</section>
+
+
+
+
+
+				<!-- Entering the next section -->
+
+				<section class="controls" id="controls">
+					<h1>Controls</h1>
+					<div>
+						<button class="btn-style stop-session" id='stop-session'>Stop Session</button>
+					</div>
+					<div>
+						<button class="btn-style reset" id='reset-btn'>Reset</button>
+					</div>
+
+
+				
+				</section>
+
+
+
+
+
+
+				<!-- Entering the next section -->
+
+				<section class="profile"  id="profile">
+					<h1>Profile</h1>
+
+
+
+				
+				</section>
+
+
+	        </main> 
+
+		</div>
+		<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+	    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+	    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+	    <script type="module" src="sc3.js"></script>
+	    <script src="active.js"></script>
+
+	</body>
+</html>
