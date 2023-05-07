@@ -20,14 +20,13 @@
 				<ion-icon name="menu"  size="large"	class="icn menuicn"	id="menuicn" alt="menu-icon"></ion-icon>
 			</div>
 
-			<div class="searchbar">
+			<!-- <div class="searchbar">
 				<input type="text"
 					placeholder="Search">
 				<div class="searchbtn">
 					<ion-icon name="search-sharp"  size="large" style="color: #fff;"></ion-icon>
-					
 				</div>
-			</div>
+			</div> -->
 
 			<div class="message">
 				<div class="circle"></div>
@@ -196,6 +195,52 @@
 
 				<section class="profile"  id="profile">
 					<h1>Profile</h1>
+
+					<div class="searchbar">
+						<input type="text" placeholder="Enter Voter ID" id="voter-id" oninput="this.value = this.value.toUpperCase()" minlength="6" maxlength="6">
+						<div class="searchbtn" id="searchbtn">
+							<ion-icon name="search-sharp"  size="large" style="color: #fff;"></ion-icon>
+						</div>
+					</div>
+
+					<div class="voter-details">
+			    		<div class="voter-header">
+			    			<h2 class="recent-Articles">Voter Details</h2>
+			    		</div>
+
+			    		<div class="voter-body">
+			    			
+			    			<div class="details">
+			    				<div class="details1">
+			    					<h3 class="t-op-nextlvl">Voter ID</h3>
+			    					<h3 class="t-op-nextlvl"><span id="voter_id">-</span></h3>
+			    				</div>
+
+			    				<div class="details1">
+			    					<h3 class="t-op-nextlvl">Voter Name</h3>
+			    					<h3 class="t-op-nextlvl"><span id="voter_name">-</span></h3>
+			    				</div>
+
+			    				<div class="details1">
+			    					<h3 class="t-op-nextlvl">Aadhaar Number</h3>
+			    					<h3 class="t-op-nextlvl"><span id="aadhaar_no">-</span></h3>
+			    				</div>
+
+								<div class="details1">
+			    					<h3 class="t-op-nextlvl">Email-ID</h3>
+			    					<h3 class="t-op-nextlvl"><span id="email_id">-</span></h3>
+			    				</div>
+
+								<div class="details1">
+			    					<h3 class="t-op-nextlvl">Mobile Number</h3>
+			    					<h3 class="t-op-nextlvl"><span id="mob_num">-</span></h3>
+			    				</div>
+			    			</div>
+
+			    		</div>
+
+			    	</div>
+
 
 
 
