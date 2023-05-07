@@ -510,7 +510,7 @@ border: none;
 cursor: pointer;
 }
 
-.voter-details {
+.voting-container-1 {
     min-height: 300px;
     max-width: 950px;
     margin: 70px auto 0px auto;
@@ -519,16 +519,17 @@ cursor: pointer;
     box-shadow: 3px 3px 10px rgb(188, 188, 188);
     padding: 0px 20px 20px 20px;
 }
-.voter-header {
+    
+.voting-header-1 {
     height: 80px;
-    width: 900px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px 20px 10px 20px;
     border-bottom: 2px solid rgba(0, 20, 151, 0.59);
     }
-.voter-body {
+.voting-body-1 {
     max-width: 950px;
     overflow-x: auto;
     padding: 20px;
@@ -550,8 +551,7 @@ max-width: 1160px;
 overflow-x: auto;
 padding: 20px;
 }
-.voting-topic-heading,
-.item1 {
+.voting-topic-heading, .item1 {
 width: 1120px;
 display: flex;
 justify-content: space-between;
@@ -600,9 +600,18 @@ border-radius: 4px;
     .items {
         width: 800px;
     }
+    .voting-header-1 {
+        max-width: 720px;
     }
+    .voting-container-1 {
+        max-width: 720px;
+    }
+    .details,.details1{
+        width: 585px;
+    }
+}
     
-    @media screen and (max-width: 850px) {
+@media screen and (max-width: 850px) {
     .nav-img {
         height: 30px;
     }
@@ -612,9 +621,7 @@ border-radius: 4px;
     .nav-option h3 {
         font-size: 20px;
     }
-    .voting-topic-heading,
-    .item1,
-    .items {
+    .voting-topic-heading,.item1,.items {
         width: 700px;
     }
     .navcontainer {
@@ -631,13 +638,22 @@ border-radius: 4px;
     .navclose {
         left: 00px;
     }
-    .searchbar {
+    /* .searchbar {
         display: none;
-    }
+    } */
     .main {
         padding: 40px 30px 30px 30px;
     }
-    .searchbar2 {
+    .voting-header-1 {
+        max-width: 720px;
+    }
+    .voting-container-1 {
+        max-width: 720px;
+    }
+    .details,.details1{
+        width: 585px;
+    }
+    /* .searchbar2 {
         width: 100%;
         display: flex;
         margin: 0 0 40px 0;
@@ -651,10 +667,10 @@ border-radius: 4px;
         padding: 0 20px;
         font-size: 15px;
         border: 2px solid var(--secondary-color);
-    }
-    }
+    } */
+}
     
-    @media screen and (max-width: 490px) {
+@media screen and (max-width: 490px) {
     .message {
         display: none;
     }
@@ -683,14 +699,18 @@ border-radius: 4px;
     .recent-Articles {
         font-size: 20px;
     }
-    .voting-topic-heading,
-    .item1,
-    .items {
+    .voting-topic-heading, .item1, .items {
         width: 550px;
     }
+    .voter-header{
+        width: 320px;
     }
+    .details,.details1{
+        width: 407px;
+    }
+}
     
-    @media screen and (max-width: 400px) {
+@media screen and (max-width: 400px) {
     .recent-Articles {
         font-size: 17px;
     }
@@ -706,9 +726,12 @@ border-radius: 4px;
     .searchbtn img {
         height: 20px;
     }
+    .details,.details1{
+        width: 390px;
     }
+}
     
-    @media screen and (max-width: 320px) {
+@media screen and (max-width: 320px) {
     .recent-Articles {
         font-size: 12px;
     }
@@ -727,9 +750,7 @@ border-radius: 4px;
     .t-op-nextlvl {
         font-size: 10px;
     }
-    .voting-topic-heading,
-    .item1,
-    .items {
+    .voting-topic-heading, .item1, .items {
         width: 300px;
     }
     .voting-body {
@@ -741,7 +762,10 @@ border-radius: 4px;
     .searchbtn {
         width: 40px;
     }
-    .searchbar2 input {
+    .searchbar input {
         width: 180px;
+    }
+    .details,.details1{
+        width: 300px;
     }
 }
