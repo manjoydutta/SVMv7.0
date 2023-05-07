@@ -246,7 +246,7 @@ cursor: pointer;
 .searchbar, .message, .logosec {
 display: flex;
 align-items: center;
-justify-content: center;
+justify-content: left;
 }
 
 .searchbar2 {
@@ -482,6 +482,7 @@ border-radius: 30px;
 box-shadow: 3px 3px 10px rgb(188, 188, 188);
 padding: 0px 20px 20px 20px;
 }
+
 .voting-header {
 height: 80px;
 width: 100%;
@@ -507,6 +508,41 @@ color: white;
 font-size: 15px;
 border: none;
 cursor: pointer;
+}
+
+.voter-details {
+    min-height: 300px;
+    max-width: 950px;
+    margin: 70px auto 0px auto;
+    background-color: #ffffff;
+    border-radius: 30px;
+    box-shadow: 3px 3px 10px rgb(188, 188, 188);
+    padding: 0px 20px 20px 20px;
+}
+.voter-header {
+    height: 80px;
+    width: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px 10px 20px;
+    border-bottom: 2px solid rgba(0, 20, 151, 0.59);
+    }
+.voter-body {
+    max-width: 950px;
+    overflow-x: auto;
+    padding: 20px;
+}
+.details {
+    width: 850px;
+    margin-top: 15px;
+}
+.details1 {
+    width: 850px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
 }
 
 .voting-body {
