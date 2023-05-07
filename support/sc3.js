@@ -11,6 +11,11 @@ var ctx = document.getElementById("pieChart").getContext("2d");
 var resetButton = document.getElementById("reset-btn");
 var stopSession = document.getElementById("stop-session");
 
+const voter_id = document.querySelector("#voter_id");
+const voter_name = document.querySelector("#voter_name");
+const aadhaar_no = document.querySelector("#aadhaar_no");
+const email_id = document.querySelector("#email_id");
+const mob_num = document.querySelector("#mob_num");
 
 let menuicn = document.querySelector(".menuicn");
 let nav = document.querySelector(".navcontainer");
@@ -19,6 +24,18 @@ menuicn.addEventListener("click",()=>{
   nav.classList.toggle("navclose");
 });
 
+const firebaseConfig = {
+  apiKey: "AIzaSyDaPRPHd6sw09DB4VpHfpx6W6fuAYr_qWc",
+  authDomain: "store-data-65df2.firebaseapp.com",
+  databaseURL: "https://store-data-65df2-default-rtdb.firebaseio.com",
+  projectId: "store-data-65df2",
+  storageBucket: "store-data-65df2.appspot.com",
+  messagingSenderId: "724606610653",
+  appId: "1:724606610653:web:3462582fe3ff1d9167ff34",
+  measurementId: "G-FKGPJP0Q29"
+};
+var app = firebase.initializeApp(firebaseConfig, "app");
+var firebaseRef = app.database();
 
 const firebaseConfig1 = {
   apiKey: "AIzaSyBEwJV2zhRCCGZgEo_39dC1dhr_Vgu45r4",
@@ -96,4 +113,17 @@ firebaseRef2.on("value",function(snapshot){
   var cong = snapshot.child('cong').val();
   inc_count.textContent=cong;
   inc_per.textContent=(cong/votted).toFixed(2)*100;
+});
+
+firebaseRef.ref('user').on("value", function(snapshot){
+  document.getElementById("searchbtn").addEventListener("click",function(){
+      var user = document.getElementById('voter-id').value;
+      voter_id.textContent=user;
+      var a = snapshot.child(user).child('aadhaar').val();
+      aadhaar_no.textContent=a;
+      var b = snapshot.child(user).child('email').val();
+      email_id.textContent=b;
+      var c = snapshot.child(user).child('phone').val();
+      mob_num.textContent=c;
+  });
 });
