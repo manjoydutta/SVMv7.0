@@ -66,7 +66,7 @@ firebaseRef1.on("value", function(snapshot){
   enrolled_voters.textContent=c;
   votted = flag.filter(element => element === "T").length;
   votes_polled.textContent=votted;
-  percentage_turnout.textContent=(votted/c).toFixed(4)*100;
+  percentage_turnout.textContent=(votted/c).toFixed(3)*100;
   var pieChart = new Chart(ctx, {
       type: "pie",
       data: {
